@@ -22,11 +22,11 @@ pid "/tmp/unicorn.FitnessTracker.pid"
 if env == "production"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
-  working_directory "/home/gavin/FitnessTracker/current"
+  working_directory "/home/gavin/FitnessTracker/production/current"
 
   # feel free to point this anywhere accessible on the filesystem
   user 'gavin'
-  shared_path = "/home/gavin/FitnessTracker/shared"
+  shared_path = "/home/gavin/FitnessTracker/production/shared"
 
   stderr_path "#{shared_path}/log/unicorn.stderr.log"
   stdout_path "#{shared_path}/log/unicorn.stdout.log"
